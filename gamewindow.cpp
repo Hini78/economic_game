@@ -13,7 +13,14 @@ GameWindow::GameWindow(Game* _gameState, QWidget *parent)
     gameState=_gameState;
     ui->setupUi(this);
     setWindowTitle("Экономическая стратегия");
+
+
+    bank=new Bank;
+    for(int i =1;i<=_gameState->players;i++){
+        bank->addPlayer(i);
+    }
     displayBankStates();
+    displayPlayerStates(bank->getPlayersMap()[1].getInfo());
 
     ui->giveFactoryLabel->hide();
     ui->giveFactoryChoice->hide();
@@ -24,8 +31,8 @@ GameWindow::GameWindow(Game* _gameState, QWidget *parent)
     ui->giveResourcesChoice->hide();
     ui->giveResourcesLabel->hide();
 
-    ui->buyMaterialsPriceChoice->setMaximum(9999);
-    ui->sellResourcesPriceChoice->setMaximum(9999);
+   // connect(ui->field_00, SIGNAL(clicked()), this, SLOT(buttonClicked()));
+ main
 }
 
 int roundNumber = 1;
@@ -47,9 +54,14 @@ void checkHappyAccident(){
 
 void GameWindow::on_nextTurnButton_clicked()
 {
+    bank->auctionBuyOffer(turnNumber,ui->buyMaterialsAmountChoice->text().toInt(),ui->buyMaterialsPriceChoice->text().toInt());
+    bank->auctionSellOffer(turnNumber,ui->sellResourcesAmountChoice->text().toInt(),ui->sellProductPriceChoice->text().toInt());
+
     turnNumber++;
     checkHappyAccident();
-    if (turnNumber>4){
+    if (turnNumber > bank->getPlayersMap().size()){
+        bank->processAuctions();
+        bank->processTurn();
         turnNumber=1;
         roundNumber++;
         displayBankStates();
@@ -60,6 +72,7 @@ void GameWindow::on_nextTurnButton_clicked()
     HidePlayerStatsWindow* hidePlayerStatsWindow = new HidePlayerStatsWindow();
     hidePlayerStatsWindow->show();
 
+    displayPlayerStates(bank->getPlayersMap()[turnNumber].getInfo());
     //ui->giveFactoryLabel->show();
     //ui->giveFactoryChoice->show();
     //ui->giveMoneyLabel->show();
@@ -77,15 +90,14 @@ void GameWindow::on_giveUpButton_clicked()
 }
 
 void GameWindow::displayBankStates(){
-    int materialPrice=rand()%401+100;
-    int materialAmount=rand()%5+1;
-    int resourcePrice=rand()%401+100;
-    int resourceAmount=rand()%5+1;
+    bank->bankBuyOffer();
+    bank->bankSellOffer();
 
-    std::string bankStatesString="Продажа сырья: " + std::to_string(materialPrice)
-                             + "\nКоличество сырья: " + std::to_string(materialAmount)
-                             + "\nКупля ресурсов: " + std::to_string(resourcePrice)
-                             + "\nКоличество ресурсов: " + std::to_string(resourceAmount);
+
+    std::string bankStatesString="Продажа сырья: " + std::to_string(bank->getRaw_material_price())
+                             + "\nКоличество сырья: " + std::to_string(bank->getRaw_materials_for_sale())
+                             + "\nКупля ресурсов: " + std::to_string(bank->getProduct_price())
+                             + "\nКоличество ресурсов: " + std::to_string(bank->getProducts_for_sale());
 
     QString bankStateDisplay = QString::fromStdString(bankStatesString);
 
