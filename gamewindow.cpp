@@ -32,6 +32,7 @@ GameWindow::GameWindow(Game* _gameState, QWidget *parent)
     ui->giveResourcesLabel->hide();
 
    // connect(ui->field_00, SIGNAL(clicked()), this, SLOT(buttonClicked()));
+ main
 }
 
 int roundNumber = 1;

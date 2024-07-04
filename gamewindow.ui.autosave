@@ -70,8 +70,8 @@
     <rect>
      <x>540</x>
      <y>50</y>
-     <width>291</width>
-     <height>241</height>
+     <width>271</width>
+     <height>191</height>
     </rect>
    </property>
    <property name="font">
@@ -87,8 +87,8 @@
    <property name="geometry">
     <rect>
      <x>540</x>
-     <y>300</y>
-     <width>291</width>
+     <y>260</y>
+     <width>271</width>
      <height>131</height>
     </rect>
    </property>
@@ -424,7 +424,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_2">
+  <widget class="QLineEdit" name="sellResourcesPriceChoice">
    <property name="geometry">
     <rect>
      <x>320</x>
@@ -440,7 +440,6 @@
      <x>320</x>
      <y>90</y>
      <width>81</width>
-
      <height>28</height>
     </rect>
    </property>
