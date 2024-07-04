@@ -23,6 +23,9 @@ GameWindow::GameWindow(Game* _gameState, QWidget *parent)
     ui->giveMaterialsChoice->hide();
     ui->giveResourcesChoice->hide();
     ui->giveResourcesLabel->hide();
+
+    ui->buyMaterialsPriceChoice->setMaximum(9999);
+    ui->sellResourcesPriceChoice->setMaximum(9999);
 }
 
 int roundNumber = 1;
