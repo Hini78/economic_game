@@ -334,29 +334,6 @@
     <string>Логин</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="startGamePassword">
-   <property name="geometry">
-    <rect>
-     <x>140</x>
-     <y>130</y>
-     <width>291</width>
-     <height>28</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_2">
-   <property name="geometry">
-    <rect>
-     <x>70</x>
-     <y>130</y>
-     <width>63</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Пароль</string>
-   </property>
-  </widget>
   <widget class="QPushButton" name="startGameButton">
    <property name="geometry">
     <rect>

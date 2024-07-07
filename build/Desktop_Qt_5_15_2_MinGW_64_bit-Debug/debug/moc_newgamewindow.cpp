@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_NewGameWindow_t {
-    QByteArrayData data[15];
-    char stringdata0[336];
+    QByteArrayData data[13];
+    char stringdata0[287];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -39,22 +39,18 @@ QT_MOC_LITERAL(3, 42, 29), // "on_startGameLogin_textChanged"
 QT_MOC_LITERAL(4, 72, 4), // "arg1"
 QT_MOC_LITERAL(5, 77, 22), // "unblockStartGameButton"
 QT_MOC_LITERAL(6, 100, 12), // "loginSettled"
-QT_MOC_LITERAL(7, 113, 15), // "passwordSettled"
-QT_MOC_LITERAL(8, 129, 18), // "playerCountSettled"
-QT_MOC_LITERAL(9, 148, 32), // "on_startGamePassword_textChanged"
-QT_MOC_LITERAL(10, 181, 30), // "on_onePlayerGameChoice_clicked"
-QT_MOC_LITERAL(11, 212, 30), // "on_twoPlayerGameChoice_clicked"
-QT_MOC_LITERAL(12, 243, 32), // "on_threePlayerGameChoice_clicked"
-QT_MOC_LITERAL(13, 276, 31), // "on_fourPlayerGameChoice_clicked"
-QT_MOC_LITERAL(14, 308, 27) // "on_backToMenuButton_clicked"
+QT_MOC_LITERAL(7, 113, 18), // "playerCountSettled"
+QT_MOC_LITERAL(8, 132, 30), // "on_onePlayerGameChoice_clicked"
+QT_MOC_LITERAL(9, 163, 30), // "on_twoPlayerGameChoice_clicked"
+QT_MOC_LITERAL(10, 194, 32), // "on_threePlayerGameChoice_clicked"
+QT_MOC_LITERAL(11, 227, 31), // "on_fourPlayerGameChoice_clicked"
+QT_MOC_LITERAL(12, 259, 27) // "on_backToMenuButton_clicked"
 
     },
     "NewGameWindow\0on_startGameButton_clicked\0"
     "\0on_startGameLogin_textChanged\0arg1\0"
     "unblockStartGameButton\0loginSettled\0"
-    "passwordSettled\0playerCountSettled\0"
-    "on_startGamePassword_textChanged\0"
-    "on_onePlayerGameChoice_clicked\0"
+    "playerCountSettled\0on_onePlayerGameChoice_clicked\0"
     "on_twoPlayerGameChoice_clicked\0"
     "on_threePlayerGameChoice_clicked\0"
     "on_fourPlayerGameChoice_clicked\0"
@@ -68,7 +64,7 @@ static const uint qt_meta_data_NewGameWindow[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-       9,   14, // methods
+       8,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -76,21 +72,19 @@ static const uint qt_meta_data_NewGameWindow[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   59,    2, 0x08 /* Private */,
-       3,    1,   60,    2, 0x08 /* Private */,
-       5,    3,   63,    2, 0x08 /* Private */,
-       9,    1,   70,    2, 0x08 /* Private */,
-      10,    0,   73,    2, 0x08 /* Private */,
-      11,    0,   74,    2, 0x08 /* Private */,
-      12,    0,   75,    2, 0x08 /* Private */,
-      13,    0,   76,    2, 0x08 /* Private */,
-      14,    0,   77,    2, 0x08 /* Private */,
+       1,    0,   54,    2, 0x08 /* Private */,
+       3,    1,   55,    2, 0x08 /* Private */,
+       5,    2,   58,    2, 0x08 /* Private */,
+       8,    0,   63,    2, 0x08 /* Private */,
+       9,    0,   64,    2, 0x08 /* Private */,
+      10,    0,   65,    2, 0x08 /* Private */,
+      11,    0,   66,    2, 0x08 /* Private */,
+      12,    0,   67,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
     QMetaType::Void, QMetaType::QString,    4,
-    QMetaType::Void, QMetaType::Bool, QMetaType::Bool, QMetaType::Bool,    6,    7,    8,
-    QMetaType::Void, QMetaType::QString,    4,
+    QMetaType::Void, QMetaType::Bool, QMetaType::Bool,    6,    7,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -108,13 +102,12 @@ void NewGameWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
         switch (_id) {
         case 0: _t->on_startGameButton_clicked(); break;
         case 1: _t->on_startGameLogin_textChanged((*reinterpret_cast< const QString(*)>(_a[1]))); break;
-        case 2: _t->unblockStartGameButton((*reinterpret_cast< bool(*)>(_a[1])),(*reinterpret_cast< bool(*)>(_a[2])),(*reinterpret_cast< bool(*)>(_a[3]))); break;
-        case 3: _t->on_startGamePassword_textChanged((*reinterpret_cast< const QString(*)>(_a[1]))); break;
-        case 4: _t->on_onePlayerGameChoice_clicked(); break;
-        case 5: _t->on_twoPlayerGameChoice_clicked(); break;
-        case 6: _t->on_threePlayerGameChoice_clicked(); break;
-        case 7: _t->on_fourPlayerGameChoice_clicked(); break;
-        case 8: _t->on_backToMenuButton_clicked(); break;
+        case 2: _t->unblockStartGameButton((*reinterpret_cast< bool(*)>(_a[1])),(*reinterpret_cast< bool(*)>(_a[2]))); break;
+        case 3: _t->on_onePlayerGameChoice_clicked(); break;
+        case 4: _t->on_twoPlayerGameChoice_clicked(); break;
+        case 5: _t->on_threePlayerGameChoice_clicked(); break;
+        case 6: _t->on_fourPlayerGameChoice_clicked(); break;
+        case 7: _t->on_backToMenuButton_clicked(); break;
         default: ;
         }
     }
@@ -149,13 +142,13 @@ int NewGameWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 9)
+        if (_id < 8)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 9;
+        _id -= 8;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 9)
+        if (_id < 8)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 9;
+        _id -= 8;
     }
     return _id;
 }

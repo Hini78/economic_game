@@ -17,11 +17,9 @@ public:
 private slots:
     void on_continueGameButton_clicked();
 
-    void unblockContinueGameButton(bool loginSettled, bool passwordSettled);
+    void unblockContinueGameButton(bool loginSettled);
 
     void on_loginInputLine_textChanged(const QString &arg1);
-
-    void on_passwordInputLine_textChanged(const QString &arg1);
 
     void on_backToMenuButton_clicked();
 

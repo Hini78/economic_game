@@ -22,9 +22,7 @@ class Ui_LoadGameWindow
 {
 public:
     QLineEdit *loginInputLine;
-    QLineEdit *passwordInputLine;
     QLabel *label;
-    QLabel *label_2;
     QPushButton *continueGameButton;
     QPushButton *backToMenuButton;
 
@@ -33,22 +31,67 @@ public:
         if (LoadGameWindow->objectName().isEmpty())
             LoadGameWindow->setObjectName(QString::fromUtf8("LoadGameWindow"));
         LoadGameWindow->resize(514, 392);
+        QPalette palette;
+        QBrush brush(QColor(2, 83, 49, 255));
+        brush.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        QBrush brush1(QColor(240, 221, 177, 255));
+        brush1.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Active, QPalette::Button, brush1);
+        QBrush brush2(QColor(255, 255, 255, 255));
+        brush2.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Active, QPalette::Light, brush2);
+        palette.setBrush(QPalette::Active, QPalette::Text, brush);
+        palette.setBrush(QPalette::Active, QPalette::BrightText, brush);
+        QBrush brush3(QColor(85, 69, 40, 255));
+        brush3.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Active, QPalette::ButtonText, brush3);
+        QBrush brush4(QColor(215, 240, 209, 255));
+        brush4.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Active, QPalette::Base, brush4);
+        QBrush brush5(QColor(160, 212, 164, 255));
+        brush5.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Active, QPalette::Window, brush5);
+        QBrush brush6(QColor(89, 159, 118, 255));
+        brush6.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Active, QPalette::Highlight, brush6);
+        QBrush brush7(QColor(211, 240, 191, 255));
+        brush7.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Active, QPalette::HighlightedText, brush7);
+        QBrush brush8(QColor(186, 223, 180, 255));
+        brush8.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Active, QPalette::AlternateBase, brush8);
+        palette.setBrush(QPalette::Active, QPalette::ToolTipText, brush);
+        palette.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette.setBrush(QPalette::Inactive, QPalette::Button, brush1);
+        palette.setBrush(QPalette::Inactive, QPalette::Light, brush2);
+        palette.setBrush(QPalette::Inactive, QPalette::Text, brush);
+        palette.setBrush(QPalette::Inactive, QPalette::BrightText, brush);
+        palette.setBrush(QPalette::Inactive, QPalette::ButtonText, brush3);
+        palette.setBrush(QPalette::Inactive, QPalette::Base, brush4);
+        palette.setBrush(QPalette::Inactive, QPalette::Window, brush5);
+        palette.setBrush(QPalette::Inactive, QPalette::Highlight, brush6);
+        palette.setBrush(QPalette::Inactive, QPalette::HighlightedText, brush7);
+        palette.setBrush(QPalette::Inactive, QPalette::AlternateBase, brush8);
+        palette.setBrush(QPalette::Inactive, QPalette::ToolTipText, brush);
+        palette.setBrush(QPalette::Disabled, QPalette::Button, brush1);
+        palette.setBrush(QPalette::Disabled, QPalette::Light, brush2);
+        palette.setBrush(QPalette::Disabled, QPalette::BrightText, brush);
+        palette.setBrush(QPalette::Disabled, QPalette::Base, brush5);
+        palette.setBrush(QPalette::Disabled, QPalette::Window, brush5);
+        palette.setBrush(QPalette::Disabled, QPalette::HighlightedText, brush7);
+        palette.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush8);
+        palette.setBrush(QPalette::Disabled, QPalette::ToolTipText, brush);
+        LoadGameWindow->setPalette(palette);
         loginInputLine = new QLineEdit(LoadGameWindow);
         loginInputLine->setObjectName(QString::fromUtf8("loginInputLine"));
         loginInputLine->setGeometry(QRect(160, 110, 281, 28));
-        passwordInputLine = new QLineEdit(LoadGameWindow);
-        passwordInputLine->setObjectName(QString::fromUtf8("passwordInputLine"));
-        passwordInputLine->setGeometry(QRect(160, 160, 281, 28));
         label = new QLabel(LoadGameWindow);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(90, 110, 63, 20));
         QFont font;
         font.setPointSize(9);
         label->setFont(font);
-        label_2 = new QLabel(LoadGameWindow);
-        label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setGeometry(QRect(90, 160, 63, 20));
-        label_2->setFont(font);
         continueGameButton = new QPushButton(LoadGameWindow);
         continueGameButton->setObjectName(QString::fromUtf8("continueGameButton"));
         continueGameButton->setGeometry(QRect(160, 250, 191, 41));
@@ -65,7 +108,6 @@ public:
     {
         LoadGameWindow->setWindowTitle(QCoreApplication::translate("LoadGameWindow", "Form", nullptr));
         label->setText(QCoreApplication::translate("LoadGameWindow", "\320\233\320\276\320\263\320\270\320\275", nullptr));
-        label_2->setText(QCoreApplication::translate("LoadGameWindow", "\320\237\320\260\321\200\320\276\320\273\321\214", nullptr));
         continueGameButton->setText(QCoreApplication::translate("LoadGameWindow", "\320\237\321\200\320\276\320\264\320\276\320\273\320\266\320\270\321\202\321\214 \320\270\320\263\321\200\321\203", nullptr));
         backToMenuButton->setText(QCoreApplication::translate("LoadGameWindow", "\320\222\320\265\321\200\320\275\321\203\321\202\321\214\321\201\321\217", nullptr));
     } // retranslateUi
